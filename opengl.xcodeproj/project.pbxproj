@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3035FD61C46BA6000E1601D /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3035FD31C46BA4200E1601D /* ORSSerial.framework */; };
 		D343B91C1C395017009AD773 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B91B1C395017009AD773 /* AppDelegate.m */; };
 		D343B91F1C395017009AD773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B91E1C395017009AD773 /* main.m */; };
 		D343B9221C395017009AD773 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B9211C395017009AD773 /* GameView.m */; };
@@ -16,7 +17,25 @@
 		D343B92C1C395017009AD773 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D343B92A1C395017009AD773 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D3035FD21C46BA4200E1601D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		D3035FD41C46BA4200E1601D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 		D343B9171C395017009AD773 /* opengl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D343B91A1C395017009AD773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D343B91B1C395017009AD773 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,17 +55,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3035FD61C46BA6000E1601D /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3035FCE1C46BA4200E1601D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3035FD31C46BA4200E1601D /* ORSSerial.framework */,
+				D3035FD51C46BA4200E1601D /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D343B90E1C395017009AD773 = {
 			isa = PBXGroup;
 			children = (
 				D343B9191C395017009AD773 /* opengl */,
 				D343B9181C395017009AD773 /* Products */,
+				D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,12 +159,35 @@
 			mainGroup = D343B90E1C395017009AD773;
 			productRefGroup = D343B9181C395017009AD773 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D3035FCE1C46BA4200E1601D /* Products */;
+					ProjectRef = D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D343B9161C395017009AD773 /* opengl */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D3035FD31C46BA4200E1601D /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = D3035FD21C46BA4200E1601D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D3035FD51C46BA4200E1601D /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = D3035FD41C46BA4200E1601D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D343B9151C395017009AD773 /* Resources */ = {
@@ -297,6 +350,7 @@
 				D343B9321C395017009AD773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

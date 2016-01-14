@@ -44,7 +44,7 @@
         
         [SCNTransaction commit];
     }
-    
+
     
     [super mouseDown:theEvent];
 }

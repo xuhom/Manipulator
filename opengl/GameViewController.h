@@ -13,5 +13,10 @@
 @interface GameViewController : NSViewController
 
 @property (assign) IBOutlet GameView *gameView;
-
+@property (weak) IBOutlet NSSlider *xAxis;
+@property (weak) IBOutlet NSSlider *yAxis;
+@property (weak) IBOutlet NSSlider *zAxis;
+@property (weak) IBOutlet NSTextFieldCell *firstAngle;
+@property (weak) IBOutlet NSTextFieldCell *secondAngle;
+@property (weak) IBOutlet NSTextFieldCell *thirdAngle;
 @end

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
-        <plugIn identifier="com.apple.SceneKitIBPlugin" version="6233"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -652,18 +653,97 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="640" height="480"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <sceneView autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="536" customClass="GameView" customModuleProvider="">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-iW-m6I">
+                        <rect key="frame" x="10" y="251" width="20" height="187"/>
+                        <sliderCell key="cell" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="right" sliderType="linear" id="Ey5-tX-ZfX"/>
+                        <connections>
+                            <action selector="xAxisTapped:" target="z44-Lp-cgU" id="2R8-An-gu9"/>
+                        </connections>
+                    </slider>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9i-qW-9lM">
+                        <rect key="frame" x="37" y="251" width="20" height="187"/>
+                        <sliderCell key="cell" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="right" sliderType="linear" id="XLH-iG-bRr"/>
+                        <connections>
+                            <action selector="yAxisTapped:" target="z44-Lp-cgU" id="5XX-oj-kxC"/>
+                        </connections>
+                    </slider>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSC-gD-pLU">
+                        <rect key="frame" x="71" y="251" width="20" height="187"/>
+                        <sliderCell key="cell" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="right" sliderType="linear" id="Fgc-dg-XaS"/>
+                        <connections>
+                            <action selector="zAxisTapped:" target="z44-Lp-cgU" id="j5s-A0-okr"/>
+                        </connections>
+                    </slider>
+                    <sceneView misplaced="YES" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="536" customClass="GameView">
+                        <rect key="frame" x="104" y="5" width="536" height="480"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </sceneView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJy-hf-FWh">
+                        <rect key="frame" x="7" y="13" width="81" height="32"/>
+                        <buttonCell key="cell" type="push" title="RESET" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FML-MP-02k">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="resetTapped:" target="z44-Lp-cgU" id="b53-Rc-aM4"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruM-9u-hJl">
+                        <rect key="frame" x="2" y="199" width="37" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1:" id="YtX-ph-zui">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zN-2I-Sje">
+                        <rect key="frame" x="2" y="174" width="37" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2:" id="V7o-Zw-7JL">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTv-2Y-bZV">
+                        <rect key="frame" x="2" y="149" width="37" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="3:" id="Vgf-V3-z60">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sn-Cu-zSL">
+                        <rect key="frame" x="18" y="199" width="73" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="First angle" id="orb-fn-sZ1">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8S-WP-0df">
+                        <rect key="frame" x="18" y="174" width="87" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Second angle" id="ScP-RU-Cbr">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-i5-Yzu">
+                        <rect key="frame" x="18" y="149" width="73" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Third angle" id="QPo-CC-8ik">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="536" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="541"/>
+                    <constraint firstItem="536" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="104" id="541"/>
                     <constraint firstItem="536" firstAttribute="top" secondItem="372" secondAttribute="top" id="542"/>
                     <constraint firstItem="536" firstAttribute="bottom" secondItem="372" secondAttribute="bottom" id="543"/>
                     <constraint firstItem="536" firstAttribute="trailing" secondItem="372" secondAttribute="trailing" id="544"/>
@@ -671,16 +751,22 @@
             </view>
             <point key="canvasLocation" x="385" y="452"/>
         </window>
-        <customObject id="494" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="494" customClass="AppDelegate">
             <connections>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <viewController id="z44-Lp-cgU" customClass="GameViewController" customModuleProvider="">
+        <viewController id="z44-Lp-cgU" customClass="GameViewController">
             <connections>
+                <outlet property="firstAngle" destination="orb-fn-sZ1" id="UE2-zG-6FQ"/>
                 <outlet property="gameView" destination="536" id="No3-Ct-Xwn"/>
+                <outlet property="secondAngle" destination="ScP-RU-Cbr" id="eBv-RC-LMR"/>
+                <outlet property="thirdAngle" destination="QPo-CC-8ik" id="WBy-2M-rya"/>
                 <outlet property="view" destination="372" id="bTQ-MN-Ejh"/>
+                <outlet property="xAxis" destination="qP5-iW-m6I" id="zO3-J1-cec"/>
+                <outlet property="yAxis" destination="u9i-qW-9lM" id="WTO-Pw-PRn"/>
+                <outlet property="zAxis" destination="hSC-gD-pLU" id="rsE-eM-22G"/>
             </connections>
         </viewController>
     </objects>

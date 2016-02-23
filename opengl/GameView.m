@@ -44,9 +44,12 @@
         
         [SCNTransaction commit];
     }
+    
+    // TODO - Add materials to each of manipulator segments in order to indicate selected segment
 
     
     [super mouseDown:theEvent];
 }
+
 
 @end

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D3035FD61C46BA6000E1601D /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3035FD31C46BA4200E1601D /* ORSSerial.framework */; };
+		D3035FDA1C49246700E1601D /* przestrzen_robocza_xyz.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3035FD91C49246700E1601D /* przestrzen_robocza_xyz.txt */; };
+		D3035FDF1C492C7B00E1601D /* NSFileRead.m in Sources */ = {isa = PBXBuildFile; fileRef = D3035FDE1C492C7B00E1601D /* NSFileRead.m */; };
+		D33097741C498316006648D5 /* przestrzen_robocza_xyz_05.txt in Resources */ = {isa = PBXBuildFile; fileRef = D33097731C498316006648D5 /* przestrzen_robocza_xyz_05.txt */; };
 		D343B91C1C395017009AD773 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B91B1C395017009AD773 /* AppDelegate.m */; };
 		D343B91F1C395017009AD773 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B91E1C395017009AD773 /* main.m */; };
 		D343B9221C395017009AD773 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D343B9211C395017009AD773 /* GameView.m */; };
@@ -36,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		D3035FCD1C46BA4200E1601D /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		D3035FD91C49246700E1601D /* przestrzen_robocza_xyz.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = przestrzen_robocza_xyz.txt; sourceTree = "<group>"; };
+		D3035FDD1C492C7B00E1601D /* NSFileRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileRead.h; sourceTree = "<group>"; };
+		D3035FDE1C492C7B00E1601D /* NSFileRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileRead.m; sourceTree = "<group>"; };
+		D33097731C498316006648D5 /* przestrzen_robocza_xyz_05.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = przestrzen_robocza_xyz_05.txt; sourceTree = "<group>"; };
 		D343B9171C395017009AD773 /* opengl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opengl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D343B91A1C395017009AD773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D343B91B1C395017009AD773 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +109,8 @@
 				D343B92A1C395017009AD773 /* MainMenu.xib */,
 				D343B92D1C395017009AD773 /* Info.plist */,
 				D343B91D1C395017009AD773 /* Supporting Files */,
+				D3035FDD1C492C7B00E1601D /* NSFileRead.h */,
+				D3035FDE1C492C7B00E1601D /* NSFileRead.m */,
 			);
 			path = opengl;
 			sourceTree = "<group>";
@@ -109,6 +118,8 @@
 		D343B91D1C395017009AD773 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3035FD91C49246700E1601D /* przestrzen_robocza_xyz.txt */,
+				D33097731C498316006648D5 /* przestrzen_robocza_xyz_05.txt */,
 				D343B91E1C395017009AD773 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -194,9 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3035FDA1C49246700E1601D /* przestrzen_robocza_xyz.txt in Resources */,
 				D343B9291C395017009AD773 /* Assets.xcassets in Resources */,
 				D343B9271C395017009AD773 /* art.scnassets in Resources */,
 				D343B92C1C395017009AD773 /* MainMenu.xib in Resources */,
+				D33097741C498316006648D5 /* przestrzen_robocza_xyz_05.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +223,7 @@
 				D343B9251C395017009AD773 /* GameViewController.m in Sources */,
 				D343B9221C395017009AD773 /* GameView.m in Sources */,
 				D343B91F1C395017009AD773 /* main.m in Sources */,
+				D3035FDF1C492C7B00E1601D /* NSFileRead.m in Sources */,
 				D343B91C1C395017009AD773 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

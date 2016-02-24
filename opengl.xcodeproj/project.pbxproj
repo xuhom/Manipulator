@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3035FD61C46BA6000E1601D /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3035FD31C46BA4200E1601D /* ORSSerial.framework */; };
 		D3035FDA1C49246700E1601D /* przestrzen_robocza_xyz.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3035FD91C49246700E1601D /* przestrzen_robocza_xyz.txt */; };
 		D3035FDF1C492C7B00E1601D /* NSFileRead.m in Sources */ = {isa = PBXBuildFile; fileRef = D3035FDE1C492C7B00E1601D /* NSFileRead.m */; };
 		D33097741C498316006648D5 /* przestrzen_robocza_xyz_05.txt in Resources */ = {isa = PBXBuildFile; fileRef = D33097731C498316006648D5 /* przestrzen_robocza_xyz_05.txt */; };
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3035FD61C46BA6000E1601D /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

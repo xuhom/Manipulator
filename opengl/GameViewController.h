@@ -9,8 +9,10 @@
 #import <SceneKit/SceneKit.h>
 
 #import "GameView.h"
-#import <ORSSerial/ORSSerial.h>
-
+#import <ORSSerialPort.h>
+#import <ORSSerialPortManager.h>
+#import <ORSSerialRequest.h>
+#import <ORSSerialPacketDescriptor.h>
 @class ORSSerialPortManager;
 
 @interface GameViewController : NSViewController <ORSSerialPortDelegate>

@@ -12,10 +12,12 @@ This project consists of 3 part:
  Follow the steps:
   - change directory to the directory where downloaded Xcode project is stored
   - write command: `pod init`
-  - in newly created podfile add line: [ORSSerialPort]`'ORSSerialPort', '~> 2.0.1'` or newest version if exists
+  - in newly created podfile add line: `'ORSSerialPort', '~> 2.0.1'` or newest version if exists
   - open up file `.workspace` 
   That's it. 
+ To find more information about serial communication go to: [ORSSerialPort]
 [ORSSerialPort]:https://cocoapods.org/pods/ORSSerialPort
+
 
 #Arduino 
  Program was tested on `Arduino Leonard board`, but I hope there will be no problem to run it on any other board. 
